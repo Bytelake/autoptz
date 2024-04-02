@@ -38,18 +38,29 @@ Our application is to be used mainly with PTZ cameras and have them physically m
 
 ### Requirements
 
-- Python 3.7+
+- Python 3.7-3.9 (3.12 did not work, 3.8 did, didn't try any others)
 - Windows or macOS (Linux is not officially supported, but should work)
 
-### Installation Options:
+### Installation Instructions:
+(optional but possibly necessary) Enable Windows' long path support  
+In the group policy editor navigate to:
+```
+Local Computer Policy > Computer Configuration > Administrative Templates > System > Filesystem
+```
+And enable "Enable Win32 long paths"  
+Then reboot your computer
+
 Clone the project
 ```bash
   git clone https://github.com/AutoPTZ/autoptz.git
 ```
 
-Then instal cmake to build a copy a dlib for your system.
+Then install cmake to build a copy a dlib for your system. Download the latest binary for your system at:  
+https://cmake.org/download/  
+Make sure when installing you select the option that adds it to the PATH  
+
+Then install dlib
 ```bash
-  pip install cmake
   pip install dlib
 ```
 
